@@ -1,0 +1,5 @@
+name: Kgaut Emails
+type: module
+description: Gestion des emails custom
+core: 8.x
+package: IYS

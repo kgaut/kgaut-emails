@@ -1,0 +1,13 @@
+{
+  "name": "drupal/kgaut_emails",
+  "type": "drupal-module",
+  "description": "Classe de gestion d'emails",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.github.com/kgaut/kgaut-emails",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.github.com/kgaut/kgaut-emails/issues"
+  },
+  "require": { }
+}

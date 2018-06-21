@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains nkc_emails.module.
+ */
+
+use Drupal\Core\Render\Markup;
+use Drupal\kgaut_emails\Email;
+
+function kgaut_emails_mail($key, &$message, $params) {
+  $message['subject'] = $params['subject'];
+  $message['body'][] = Markup::create($params['message']);
+  if (isset($params['headers']) && is_array($params['headers'])) {
+    $message['headers'] += $params['headers'];
+  }
+}
+
+function kgaut_emails_preprocess_swiftmailer(&$variables) {
+  $variables['user'] = $variables['message']['params']['user'];
+  if (isset($variables['message']['params']['data'])) {
+    $variables['data'] = $variables['message']['params']['data'];
+  }
+}
