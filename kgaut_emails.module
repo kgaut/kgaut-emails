@@ -15,10 +15,3 @@ function kgaut_emails_mail($key, &$message, $params) {
     $message['headers'] += $params['headers'];
   }
 }
-
-function kgaut_emails_preprocess_swiftmailer(&$variables) {
-  $variables['user'] = $variables['message']['params']['user'];
-  if (isset($variables['message']['params']['data'])) {
-    $variables['data'] = $variables['message']['params']['data'];
-  }
-}

@@ -15,6 +15,7 @@ class Email {
   private $reply;
   private $send;
   private $params;
+  private $data;
 
 
   public function __construct($key, $to, $subject, $data = [], $from = NULL) {
@@ -46,7 +47,7 @@ class Email {
         'url' => Url::fromRoute('entity.user.canonical', ['user' => $from->id()], ['absolute' => TRUE]),
       ];
     }
-    $this->params['message'] = ['#theme' => $key, '#data' => $data['form_data']];
+    $this->params['message'] = ['#theme' => $key, '#data' => $this->data];
     $this->params['subject'] = $subject;
   }
 
