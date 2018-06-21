@@ -17,7 +17,7 @@ class Email {
   private $params;
 
 
-  public function __construct($key, $to, $subject, $from = NULL, $data = []) {
+  public function __construct($key, $to, $subject, $data = [], $from = NULL) {
     $this->key = $key;
     $this->to = $to;
     $this->data = $data;
